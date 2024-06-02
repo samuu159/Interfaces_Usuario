@@ -1,0 +1,153 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Estilos para el header */
+header {
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 250px;
+    height: 125px;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu-button {
+    background-color: #597da2c3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+}
+.menu-button:hover {
+    background-color: #b1389dd6;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.menu:hover .dropdown-content {
+    display: block;
+}
+
+.symbol img {
+    width: 100px;
+    height: 100px;
+    padding-right: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px;
+}
+
+.profile-container {
+    background-color: #b1389da5;;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.profile-container h2 {
+    color: #d2e9ffc3;
+    margin-bottom: 1rem;
+}
+
+.profile-container label {
+    display: block;
+    margin: 0.5rem 0;
+    color: #ffffff;
+}
+
+.profile-container input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.profile-container input:hover {
+    outline: none;
+    background-color: #597da2c3;
+}
+
+.profile-container input[readonly] {
+    background-color: #ccc;
+}
+
+
+.profile-container button {
+    background-color: #dd49c2;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.profile-container button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    position: relative;
+    background-color: #597da2c3;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}

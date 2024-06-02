@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker</title>
+    <link rel="stylesheet" href="css/time.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <button class="menu-button">☰</button>
+                <div class="dropdown-content">
+                    <a href="perfil.html">Perfil</a>
+                    <a href="ayuda.html">Ayuda</a>
+                    <a href="index.html">Cerrar Sesión</a>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="home.html">
+                <img src="img/logo.png" alt="Logo">
+                </a>
+            </div>
+            
+        </nav>
+        <div class="animation-container" id="animation-container"></div>
+    </header>
+    <main>
+        <div class="clock">
+            <svg class="circle" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="60" class="outer-circle"/>
+              <circle cx="60" cy="60" r="57" />
+              <line x1="60" y1="20" x2="60" y2="60" class="hours" />
+              <line x1="60" y1="2" x2="60" y2="60" class="minutes" />
+              <line x1="60" y1="0" x2="60" y2="60" class="seconds" />
+              <circle cx="60" cy="60" r="3" class="center-circle" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+              <line x1="60" y1="5" x2="60" y2="10" class="line" />
+            </svg>
+          </div>
+        <div id="today-tasks-container">
+            <table id="today-tasks">
+                <thead>
+                    <tr>
+                        <th>Tarea</th>
+                        <th>Hora de Inicio</th>
+                        <th>Hora de Fin</th>
+                    </tr>
+                </thead>
+                <tbody id="today-tasks-body">
+                    <!-- Las tareas del día actual se llenarán dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+        <div id="task-input-container">
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Escribe tu tarea..." required>
+                <div id="time-selectors">
+                    <select id="start-time">
+                        <option value="5:00">5:00</option>
+                        <option value="5:30">5:30</option>
+                        <option value="6:00">6:00</option>
+                        <option value="6:30">6:30</option>
+                        <option value="7:00">7:00</option>
+                        <option value="7:30">7:30</option>
+                        <option value="8:00">8:00</option>
+                        <option value="8:30">8:30</option>
+                        <option value="9:00">9:00</option>
+                        <option value="9:30">9:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                        <option value="22:00">22:00</option>
+                        <option value="22:30">22:30</option>
+                        <option value="23:00">23:00</option>
+                    </select>
+                    <select id="end-time">
+                        <option value="5:30">5:30</option>
+                        <option value="6:00">6:00</option>
+                        <option value="6:30">6:30</option>
+                        <option value="7:00">7:00</option>
+                        <option value="7:30">7:30</option>
+                        <option value="8:00">8:00</option>
+                        <option value="8:30">8:30</option>
+                        <option value="9:00">9:00</option>
+                        <option value="9:30">9:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                        <option value="22:00">22:00</option>
+                        <option value="22:30">22:30</option>
+                        <option value="23:00">23:00</option>
+                        <option value="23:30">23:30</option>
+                    </select>
+                </div>
+                <button type="submit">Añadir Tarea</button>
+            </form>
+        </div>
+        <div id="task-form-container">
+            <form id="task-delete-form">
+                <select id="task-select">
+                    <!-- Las opciones de tarea se llenarán dinámicamente -->
+                </select>
+                <button type="submit">Eliminar Tarea</button>
+            </form>
+        </div>
+    </main>
+    <script src="js/time.js"></script>
+</body>
+</html>

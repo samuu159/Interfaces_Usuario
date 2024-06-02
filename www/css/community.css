@@ -1,0 +1,149 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Asegura que la imagen de fondo cubra toda la pantalla */
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Añade estas propiedades para ajustar la imagen de fondo */
+    height: 100%;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+
+
+/* Estilos para el header */
+header {
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Posicionamiento relativo para el encabezado */
+}
+
+
+/* Estilos para el menú */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 250px;
+    height: 125px;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu-button {
+    background-color: #597da2c3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+}
+.menu-button:hover {
+    background-color: #b1389dd6;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Posiciona el menú debajo del botón */
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000; /* Valor alto */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.menu:hover .dropdown-content {
+    display: block;
+}
+
+.symbol img {
+    width: 100px;
+    height: 100px;
+    padding-right: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+    max-height: calc(100vh - 200px);
+    overflow: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+.community-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person-box {
+    background-color: #b1389dd6;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s; /* Agregamos una transición de transformación */
+    width: 300px; /* Definimos un ancho fijo para todas las cajas */
+    height: 200px; /* Definimos una altura fija para todas las cajas */
+}
+
+.person-box:hover {
+    transform: scale(1.10); /* Aumentamos el tamaño al pasar el ratón por encima */
+}
+
+.person {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.person-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.person-name {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.person-similarity {
+    font-size: 1rem;
+    margin: 0;
+    color: #000000; /* Color de texto secundario */
+}

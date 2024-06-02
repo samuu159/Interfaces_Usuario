@@ -1,0 +1,260 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Asegura que la imagen de fondo cubra toda la pantalla */
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Añade estas propiedades para ajustar la imagen de fondo */
+    height: 100%;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+
+/* Estilos para el header */
+header {
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Estilos para las frutas */
+.fruit {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    animation: bounce 5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -10px);
+    }
+}
+
+/* Estilos para el menú */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 250px;
+    height: 125px;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu-button {
+    background-color: #597da2c3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+}
+.menu-button:hover {
+    background-color: #b1389dd6;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #597da2c3;;
+    min-width: 160px;
+    box-shadow: 0 8px 16px white;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.menu:hover .dropdown-content {
+    display: block;
+}
+
+.symbol img {
+    width: 100px;
+    height: 100px;
+    padding-right: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+    max-height: calc(100vh - 200px);
+    overflow: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    background-color: #b1389dd6;
+    width: 600px;
+    height: 140px;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+footer {
+    position: relative;
+    background-color: #597da2c3;
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+/* Media query para dispositivos de hasta 768px de ancho */
+@media screen and (max-width: 768px) {
+
+    body, html {
+        font-size: 14px; /* Reducir el tamaño de fuente base */
+    }
+
+    header {
+        padding: 0.5rem; /* Reducir el padding del encabezado */
+    }
+
+    .logo img {
+        width: 150px; /* Reducir el tamaño del logo */
+        height: auto; /* Mantener la proporción del logo */
+    }
+
+    .menu-button {
+        font-size: 1rem; /* Reducir el tamaño del botón de menú */
+        width: 50px; /* Reducir el tamaño del botón de menú */
+        height: 50px; /* Reducir el tamaño del botón de menú */
+    }
+
+    .dropdown-content a {
+        padding: 10px; /* Ajustar el padding de los elementos del menú desplegable */
+        font-size: 1rem; /* Reducir el tamaño de fuente de los elementos del menú desplegable */
+    }
+
+    .symbol img {
+        max-width: 70px; /* Limitar el ancho máximo del símbolo */
+    }
+
+    main {
+        padding: 5vw; /* Ajustar el padding en unidades relativas */
+    }
+
+    .button-container {
+        width: 400px;
+        gap: 2vw; /* Ajustar el espacio entre botones en unidades relativas */
+    }
+
+    .button {
+        font-size: 5vw; /* Ajustar el tamaño de fuente en unidades relativas */
+        padding: 3vw; /* Ajustar el padding en unidades relativas */
+        text-align: center;
+    }
+}
+
+/* Media Query para dispositivos de hasta 480px de ancho */
+@media screen and (max-width: 480px) {
+    body, html {
+        font-size: 14px; /* Reducir el tamaño de fuente base */
+    }
+
+    header {
+        padding: 0.5rem; /* Reducir el padding del encabezado */
+    }
+
+    .logo img {
+        width: 150px; /* Reducir el tamaño del logo */
+        height: auto; /* Mantener la proporción del logo */
+    }
+
+    .menu-button {
+        font-size: 1rem; /* Reducir el tamaño del botón de menú */
+        width: 50px; /* Reducir el tamaño del botón de menú */
+        height: 50px; /* Reducir el tamaño del botón de menú */
+    }
+
+    .dropdown-content a {
+        padding: 10px; /* Ajustar el padding de los elementos del menú desplegable */
+        font-size: 1rem; /* Reducir el tamaño de fuente de los elementos del menú desplegable */
+    }
+
+    .symbol img {
+        max-width: 70px; /* Limitar el ancho máximo del símbolo */
+    }
+
+    main {
+        padding: 5vw; /* Ajustar el padding en unidades relativas */
+    }
+
+    .button-container {
+        width: 400px;
+        gap: 2vw; /* Ajustar el espacio entre botones en unidades relativas */
+    }
+
+    .button {
+        font-size: 5vw; /* Ajustar el tamaño de fuente en unidades relativas */
+        padding: 3vw; /* Ajustar el padding en unidades relativas */
+        text-align: center;
+    }
+
+}

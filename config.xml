@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.myapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>MyApp</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">Apache Cordova Team</author>
+    <content src="index.html" />
+    
+    <!-- Configuración general -->
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+
+    <!-- Configuración específica para Android -->
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+        <preference name="android-minSdkVersion" value="21" />
+        <preference name="BackupWebStorage" value="none" />
+        <application xmlns:tools="http://schemas.android.com/tools" tools:overrideLibrary="androidx.core.splashscreen">
+            <!-- Añade otras configuraciones específicas para Android aquí si es necesario -->
+        </application>
+    </platform>
+
+    <!-- Configuración específica para iOS -->
+    <platform name="ios">
+        <preference name="BackupWebStorage" value="local" />
+    </platform>
+
+    <!-- Preferencias generales -->
+    <preference name="ScrollEnabled" value="false" />
+</widget>
