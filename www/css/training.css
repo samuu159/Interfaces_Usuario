@@ -28,6 +28,46 @@ nav {
     width: 100%;
 }
 
+.info {
+    position: relative;
+    display: inline-block;
+}
+
+.info-text {
+    visibility: hidden;
+    width: 300px;
+    background-color: #dddddde9;
+    color: #000000;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Posición por encima de la imagen */
+    left: 50%;
+    margin-left: -150px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.info-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ddd transparent transparent transparent;
+}
+
+.info:hover .info-text,
+.info:active .info-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 .logo img {
     width: 250px;
     height: 125px;
@@ -254,12 +294,45 @@ main {
         width: 50px; /* Reducir el tamaño del botón de menú */
         height: 50px; /* Reducir el tamaño del botón de menú */
     }
+    .info-text {
+        visibility: hidden;
+        width: 250px;
+        background-color: #dddddde9;
+        color: #000000;
+        text-align: center;
+        border-radius: 2,5px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: -300%; /* Posición por encima de la imagen */
+        left: 25%;
+        margin-left: -100px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: medium;
+    }
+
+    .info-text::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #ddd transparent transparent transparent;
+    }
+    .main {
+        height: 100%;
+    }
 }
+
+
 
 /* Media Query para dispositivos de hasta 480px de ancho */
 @media screen and (max-width: 480px) {
     #calendar th, #calendar td {
-        padding: 0.1rem; /* Reducir aún más el padding de las celdas */
+        padding: 0.3rem; /* Reducir aún más el padding de las celdas */
         font-size: 0.7rem; /* Reducir aún más el tamaño de fuente */
     }
 
@@ -286,6 +359,9 @@ main {
         font-size: 0.8rem; /* Reducir aún más el tamaño del botón de menú */
         width: 40px; /* Reducir aún más el tamaño del botón de menú */
         height: 40px; /* Reducir aún más el tamaño del botón de menú */
+    }
+    .main {
+        height: 100%;
     }
 }
 

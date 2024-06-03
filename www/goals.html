@@ -14,100 +14,105 @@
       </head>
 </head>
 <body>
-  
-    <div class="section">
-      <div class="container">
-        <div class="row full-height justify-content-center">
-          <div class="col-12 text-center align-self-center py-5">
-            <header>
-                <nav>
-                    <div class="menu">
-                        <button class="menu-button">☰</button>
-                        <div class="dropdown-content">
-                            <a href="perfil.html">Perfil</a>
-                            <a href="ayuda.html">Ayuda</a>
-                            <a href="index.html">Cerrar Sesión</a>
+    <header>
+        <nav>
+            <div class="menu">
+                <button class="menu-button">☰</button>
+                <div class="dropdown-content">
+                    <a href="home.html">Home</a>
+                    <a href="perfil.html">Perfil</a>
+                    <a href="ayuda.html">Ayuda</a>
+                    <a href="index.html">Cerrar Sesión</a>
+                </div>
+            </div>
+            
+
+            <div class="logo">
+                
+                <a href="home.html">
+                <img src="img/logo.png" alt="Logo">
+                </a>
+            </div>
+            
+        </nav>
+        <div class="animation-container" id="animation-container"></div>
+    </header>
+
+        <div class="card-3d-wrap mx-auto">
+                <div class="section text-center">
+                <main>
+                    <div id="calendar-container">
+                        <table id="calendar">
+                            <thead>
+                                <tr>
+                                    <th>L</th>
+                                    <th>M</th>
+                                    <th>X</th>
+                                    <th>J</th>
+                                    <th>V</th>
+                                    <th>S</th>
+                                    <th>D</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="L"></td>
+                                    <td id="M"></td>
+                                    <td id="X"></td>
+                                    <td id="J"></td>
+                                    <td id="V"></td>
+                                    <td id="S"></td>
+                                    <td id="D"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="task-form-container">
+                        <form id="task-form">
+                            <input type="text" id="task-input" placeholder="Nueva tarea..." required>
+                            <select id="day-select">
+                                <option value="L">L</option>
+                                <option value="M">M</option>
+                                <option value="X">X</option>
+                                <option value="J">J</option>
+                                <option value="V">V</option>
+                                <option value="S">S</option>
+                                <option value="D">D</option>
+                            </select>
+                            <button type="submit">Añadir Tarea</button>
+                        </form>
+                    </div>
+                    <div id="task-form-container">
+                        <form id="task-delete-form">
+                            <select id="delete-day-select">
+                                <option value="L">L</option>
+                                <option value="M">M</option>
+                                <option value="X">X</option>
+                                <option value="J">J</option>
+                                <option value="V">V</option>
+                                <option value="S">S</option>
+                                <option value="D">D</option>
+                            </select>
+                            <select id="task-select">
+                                <!-- Las opciones de tarea se llenarán dinámicamente -->
+                            </select>
+                            <button type="submit">Eliminar Tarea</button>
+                        </form>
+                    </div>
+                    <div id="completion-percentage"></div>
+                    <div class="info">
+                        <img src="img/info.png" alt="Logo">
+                        <div class="info-text">
+                            <strong>Cómo usar la interfaz de GOALS de forma eficiente y eficaz:</strong><br>
+                            Escribe la tarea que desees realizar y selecciona el día que la quieres realizar.<br>
+                            Añádela a nuestra tabla de tareas dándole a añadir tarea.<br>
+                            Una vez realices la tarea pincha sobre ella en la tabla para marcarla como completada y ver el progreso que llevas de tu semana fijándote en el porcentaje de las tareas que llevas completadas.<br>
+                            Por último, si te arrepientes de haber añadido alguna tarea, la puedes eliminar seleccionando el día y el nombre que le hayas puesto.
                         </div>
                     </div>
-                    <div class="logo">
-                        <a href="home.html">
-                        <img src="img/logo.png" alt="Logo">
-                        </a>
-                    </div>
-                    
-                </nav>
-                <div class="animation-container" id="animation-container"></div>
-            </header>
-  
-              <div class="card-3d-wrap mx-auto">
-                      <div class="section text-center">
-                        <main>
-                            <div id="calendar-container">
-                                <table id="calendar">
-                                    <thead>
-                                        <tr>
-                                            <th>L</th>
-                                            <th>M</th>
-                                            <th>X</th>
-                                            <th>J</th>
-                                            <th>V</th>
-                                            <th>S</th>
-                                            <th>D</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td id="L"></td>
-                                            <td id="M"></td>
-                                            <td id="X"></td>
-                                            <td id="J"></td>
-                                            <td id="V"></td>
-                                            <td id="S"></td>
-                                            <td id="D"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div id="task-form-container">
-                                <form id="task-form">
-                                    <input type="text" id="task-input" placeholder="Nueva tarea..." required>
-                                    <select id="day-select">
-                                        <option value="L">L</option>
-                                        <option value="M">M</option>
-                                        <option value="X">X</option>
-                                        <option value="J">J</option>
-                                        <option value="V">V</option>
-                                        <option value="S">S</option>
-                                        <option value="D">D</option>
-                                    </select>
-                                    <button type="submit">Añadir Tarea</button>
-                                </form>
-                            </div>
-                            <div id="task-form-container">
-                                <form id="task-delete-form">
-                                    <select id="delete-day-select">
-                                        <option value="L">L</option>
-                                        <option value="M">M</option>
-                                        <option value="X">X</option>
-                                        <option value="J">J</option>
-                                        <option value="V">V</option>
-                                        <option value="S">S</option>
-                                        <option value="D">D</option>
-                                    </select>
-                                    <select id="task-select">
-                                        <!-- Las opciones de tarea se llenarán dinámicamente -->
-                                    </select>
-                                    <button type="submit">Eliminar Tarea</button>
-                                </form>
-                            </div>
-                            <div id="completion-percentage"></div>
-                            <div id="tasks-container"></div>
-                        </main>
+                </main>
               
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
     
   </body>

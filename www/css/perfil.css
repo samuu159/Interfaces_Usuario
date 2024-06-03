@@ -2,10 +2,14 @@ body, html {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    /* Asegura que la imagen de fondo cubra toda la pantalla */
     background-image: url('../img/fondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    /* Añade estas propiedades para ajustar la imagen de fondo */
+    height: 100%;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
 /* Estilos para el header */
@@ -18,17 +22,18 @@ header {
     position: relative;
 }
 
+/* Estilos para el menú */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-
 .logo img {
     width: 250px;
     height: 125px;
 }
+
 
 .menu {
     position: relative;
@@ -45,6 +50,7 @@ nav {
     height: 70px;
     border-radius: 8px;
 }
+
 .menu-button:hover {
     background-color: #b1389dd6;
 }
@@ -54,19 +60,18 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
+    background-color: #597da2c3;;
     min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px white;
     z-index: 1000;
 }
 
 .dropdown-content a {
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
 .dropdown-content a:hover {
     background-color: #ddd;
 }
@@ -75,11 +80,14 @@ nav {
     display: block;
 }
 
+
 .symbol img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    max-width: 100px; /* Limita el ancho máximo del símbolo */
+    height: auto;
     padding-right: 1rem;
 }
+
 
 main {
     display: flex;

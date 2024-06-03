@@ -144,7 +144,8 @@ main {
 }
 
 .button:hover {
-    background-color: #0056b3;
+    color: white;
+    background-color: #0057b3a3;
 }
 
 p {
